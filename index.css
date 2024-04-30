@@ -1,0 +1,128 @@
+
+
+html, body {
+  height: 100%; /* Ensure HTML and body take up the full height of the viewport */
+  margin: 0; /* Remove default margin */
+  font-family: Inter; 
+}
+
+.section-1{
+    background: #6943FF;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-2{
+    background: #1F2937;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 10px 0px;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+    color: #FFFFFF;
+
+}
+
+h1 {
+    /* font-family: Inter; */
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 38px;
+    letter-spacing: -0.03em;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 33px
+}
+
+.container1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+}
+
+input{
+  background: transparent;
+  border: solid 2px #B295FF;
+  border-radius: 5px;
+  width: 117px;
+  height: 83px;
+  margin: 25px;
+  color: #FFFFFF;
+  font-size: 58px;
+  font-weight: 800;
+  line-height: 24.39px;
+  text-align: center;
+  padding: 10px;
+}
+  
+
+input:focus {
+  outline: none;
+}
+
+button{
+    background-color: #FFFFFF;
+    color: #000000;
+    border-radius: 5px;
+    border:none;
+    margin-bottom:40px;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    padding: 12px 38px;
+}
+
+button:focus{
+    outline: none;
+}
+
+h2{
+    color: #CCC1FF;
+}
+
+.length-container{
+    display: flex;
+    flex-direction: column;
+    background: #273549;
+    margin: 20px;
+    border-radius: 5px; 
+    padding: 10px;
+
+}
+
+.volume-container{
+    display: flex;
+    flex-direction: column;
+    background: #273549;
+    margin: 20px;
+    border-radius: 5px; 
+    padding: 10px;
+}
+
+.mass-container{
+    display: flex;
+    flex-direction: column;
+    background: #273549;
+    margin: 20px;
+    border-radius: 5px; 
+    padding: 10px;
+}
+
+
+#length-conversion{
+     font-size: 12px
+}
+
+#volume-conversion{
+     font-size: 12px
+}
+
+#mass-conversion{
+     font-size: 12px
+}
