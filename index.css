@@ -1,8 +1,6 @@
-
-
 html, body {
-  height: 100%; /* Ensure HTML and body take up the full height of the viewport */
-  margin: 0; /* Remove default margin */
+  margin: 0; 
+  padding: 0;
   font-family: Inter; 
 }
 
@@ -24,11 +22,9 @@ html, body {
     line-height: 20px;
     text-align: center;
     color: #FFFFFF;
-
 }
 
 h1 {
-    /* font-family: Inter; */
     font-size: 28px;
     font-weight: 800;
     line-height: 38px;
@@ -86,32 +82,17 @@ h2{
     color: #CCC1FF;
 }
 
-.length-container{
+.conversion-container{
     display: flex;
     flex-direction: column;
     background: #273549;
     margin: 20px;
     border-radius: 5px; 
     padding: 10px;
-
-}
-
-.volume-container{
-    display: flex;
-    flex-direction: column;
-    background: #273549;
-    margin: 20px;
-    border-radius: 5px; 
-    padding: 10px;
-}
-
-.mass-container{
-    display: flex;
-    flex-direction: column;
-    background: #273549;
-    margin: 20px;
-    border-radius: 5px; 
-    padding: 10px;
+    
+    width: calc(33.33% - px); /* Set width for each container (33.33% of flex container width) */
+    height: 80px; /* Set the height to your desired fixed size */
+    margin-bottom: 10px; /* Optional: Add margin between containers */
 }
 
 
@@ -126,3 +107,21 @@ h2{
 #mass-conversion{
      font-size: 12px
 }
+
+#error-message-container {
+    height: 20px; /* Adjust as needed */
+    overflow: hidden;
+}
+
+#error-message{
+    color: #A80707;
+    background: #ECB6B6;
+    margin: 20px ;
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: black;
+}
+

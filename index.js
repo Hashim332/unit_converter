@@ -9,18 +9,43 @@ const inputBtn = document.getElementById("input-btn")
 const lengthEl = document.getElementById("length-conversion")
 const volumeEl = document.getElementById("volume-conversion")
 const massEl = document.getElementById("mass-conversion")
+let errorMessageEl = document.getElementById("error-message")
 
 
 
-lengthEl.innerHTML = "length goes here"
-volumeEl.innerHTML = "volume goes here"
-massEl.innerHTML = "mass goes here"
+lengthEl.innerHTML = ""
+volumeEl.innerHTML = ""
+massEl.innerHTML = ""
+errorMessageEl.style.visibility="hidden";  
+
+function showErrorMessage() {
+    errorMessageEl.style.visibility="visible";  
+    errorMessageEl.innerHTML = "Please input an integer"
+    errorMessageContainer.style.height = "auto"; // Adjust height to fit content
+}
+
+function hideErrorMessage() {
+    errorMessageEl.style.visibility="hidden"; 
+    errorMessageContainer.style.height = errorMessageEl.offsetHeight + "px"; // Set container height to match error message height
+}
 
 inputBtn.addEventListener("click", function() {
-    renderLength(Number(inputEl.value))
-    renderVolume(Number(inputEl.value))
-    renderMass(Number(inputEl.value))
+    let userInput = parseInt(inputEl.value)
     
+    
+    if (Number.isInteger(userInput) === true) {
+        // errorMessageEl.style.display = "none";
+        renderLength(Number(inputEl.value))
+        renderVolume(Number(inputEl.value))
+        renderMass(Number(inputEl.value)) 
+        hideErrorMessage()
+}   else {
+        lengthEl.innerHTML = ``
+        volumeEl.innerHTML = ``
+        massEl.innerHTML = ``
+        showErrorMessage()
+        console.log("check if there's an error message")
+}
 })
 
 
@@ -48,26 +73,19 @@ function renderMass(integer) {
     massEl.innerHTML = `${integer} kilos = ${kilosToPounds.toFixed(2)} pounds | ${integer} pounds = ${poundsToKilos.toFixed(2)} kilos`
 }
 
-
-// function renderElement(integer, ratio) {
-//     let converted1 = integer * ratio
-//     let converted2 = integer / ratio
-    
-//     lengthEl.innerHTML = `${integer} metres = ${metresToFeet.toFixed(2)} feet | ${integer} feet = ${feetToMetres.toFixed(2)} metres`
-    
-// }
-
-
-
-
-// input from user taken
-// list with all 6 conversions 
-// render each line using indexing (probably)
-
-
 inputEl.addEventListener("input", function(){
   let width = Math.max(117, (this.value.length + 1) * 35);
-
   // Set the width of the input element
   this.style.width = width + 'px';
 })
+
+
+// if (Number.isInteger(inputEl.value) === true) {
+    
+// } else {
+//      lengthEl.innerHTML = ``
+//      volumeEl.innerHTML = ``
+//      massEl.innerHTML = ``
+     
+//      errorMessageEl = "Please input an integer"
+// }
